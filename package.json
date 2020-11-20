@@ -1,5 +1,5 @@
 {
-    "name": "chattrbox",
+    "name": "chatterbox",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,39 +7,22 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "build": "parcel build app/scripts/src/main.js -d app/scripts/dist",
+        "build": "parcel build --no-minify app/scripts/src/main.js -d app/scripts/dist",
         "watch": "parcel watch app/scripts/src/main.js -d app/scripts/dist"
-    },
-    "browserify": {
-        "transform": [
-            [
-                "babelify",
-                {
-                    "sourceMap": true
-                }
-            ]
-        ]
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "core-js": "^3.7.0",
-        "express": "^4.17.1",
-        "fsevents": "^2.2.1",
-        "intl": "^1.2.5",
+    "devDependencies": {
+        "crypto-js": "^4.0.0",
+        "jquery": "^3.5.1",
+        "moment": "^2.29.1",
         "nodemon": "^2.0.6",
+        "wscat": "4.0.1"
+
+    },
+    "dependencies": {
         "parcel": "^1.12.4",
         "parcel-bundler": "^1.12.4",
-        "ws": "^1.0.1"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.5.1",
-        "babel-preset-es2015": "^6.5.0",
-        "babelify": "^7.2.0",
-        "browserify": "^13.0.0",
-        "crypto-js": "^3.3.0",
-        "jquery": "^2.2.4",
-        "moment": "^2.29.1",
-        "watchify": "^3.11.1"
+        "ws": "^7.4.0"
     }
 }
